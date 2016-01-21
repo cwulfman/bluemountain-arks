@@ -53,7 +53,13 @@ class TreeWalker
   end 
 
   def to_csv
-    
+    header = @table[0].keys
+    CSV.open("/tmp/arks.csv", "w") do |csv|
+      csv << header
+      @table.each do |row|
+        csv << row.values
+      end
+    end
   end
 
 end
