@@ -1,12 +1,11 @@
 require 'nokogiri'
 require 'ezid-client'
-require 'ezid/test_helper'
 require 'csv'
 
 Ezid::Client.configure do |config|
-  config.user = TEST_USER
-  config.password = "apitest"
-  config.default_shoulder = TEST_ARK_SHOULDER
+  config.user = "pudiglib"
+  config.password = "mon23day"
+  config.default_shoulder = "ark://88435/"
 end
 
 
